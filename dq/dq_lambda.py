@@ -31,6 +31,11 @@ logger.setLevel(logging.INFO)
 sns_client = boto3.client("sns")
 SNS_TOPIC = os.environ.get("SNS_ALERT_TOPIC_ARN", "")
 
+# ── Athena Config ────────────────────────────────────────────────────────────
+ATHENA_WORKGROUP = os.environ.get("ATHENA_WORKGROUP", "primary")
+ATHENA_S3_OUTPUT = os.environ.get("ATHENA_S3_OUTPUT", "s3://yt-data-pipeline-glue-athena-query-results-sai/")
+AWS_REGION = "us-east-1"
+
 # ── Thresholds ───────────────────────────────────────────────────────────────
 MIN_ROW_COUNT = int(os.environ.get("DQ_MIN_ROW_COUNT", "10"))
 MAX_NULL_PCT = float(os.environ.get("DQ_MAX_NULL_PERCENT", "5.0"))
@@ -190,6 +195,9 @@ def lambda_handler(event, context):
                 sql=query,
                 database=database,
                 ctas_approach=False,
+                workgroup=ATHENA_WORKGROUP,
+                s3_output=ATHENA_S3_OUTPUT,
+                boto3_session=boto3.Session(region_name=AWS_REGION),
             )
         except Exception as e:
             logger.error(f"Could not read {table_name}: {e}")
