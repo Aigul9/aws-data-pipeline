@@ -12,8 +12,15 @@
 | Glue Gold | yt_data_pipeline_gold                                                                           |
 
 
+### Params for bronze-to-silver glue job
+
 --bronze_database yt_data_pipeline_bronze
 --bronze_table raw_stats
 --silver_bucket yt-data-pipeline-silver-us-east-1-sai
 --silver_database yt_data_pipeline_silver
 --silver_table clean_stats
+
+### Params for silver-to-gold glue job
+--silver_database yt_data_pipeline_silver
+--gold_bucket yt-data-pipeline-gold-us-east-1-sai
+--gold_database yt_data_pipeline_gold
