@@ -1,10 +1,10 @@
-# yt-data-pipeline
+# aws-data-pipeline
 
 This is a pet-project utilizing AWS
 
-## Project Goals
+### Project Goals
 
-## List of services used
+### List of services used
 
 - Amazon Athena
 - Amazon CloudWatch
@@ -14,7 +14,12 @@ This is a pet-project utilizing AWS
 - AWS Glue (Databases, Crawlers, ETL jobs)
 - AWS Glue Data Catalog
 - AWS IAM (Users, Roles)
+- AWS Step Functions
 
-## Project Architecture
+### Project Architecture
 
 ![Architecture.png](assets/Architecture.png)
+
+### Full Pipeline
+
+![Full Pipeline.png](assets/Full%20Pipeline.png)
