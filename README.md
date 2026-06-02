@@ -14,3 +14,7 @@ This is a pet-project utilizing AWS
 - AWS Glue (Databases, Crawlers, ETL jobs)
 - AWS Glue Data Catalog
 - AWS IAM (Users, Roles)
+
+## Project Architecture
+
+![Architecture.png](assets/Architecture.png)
