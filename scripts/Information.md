@@ -1,0 +1,19 @@
+### Variables
+
+| Name             | Value                                                                                           |
+|------------------|-------------------------------------------------------------------------------------------------|
+| Bronze Bucket Name | yt-data-pipeline-bronze-us-east-1-sai                                                           |
+| Silver Bucket Name | yt-data-pipeline-silver-us-east-1-sai                                                           |
+| Gold Bucket Name | yt-data-pipeline-gold-us-east-1-sai                                                             |
+| Scripts Bucket Name         | yt-data-pipeline-scripts-us-east-1-sai                                                          |
+|SNS ARN | arn:aws:sns:us-east-1:282254623350:yt-data-pipeline-alerts:30ec1837-7ab8-4d74-beb8-8bf69acf13ec |
+| Glue Bronze | yt_data_pipeline_bronze                                                                         |
+| Glue Silver | yt_data_pipeline_silver                                                                         |
+| Glue Gold | yt_data_pipeline_gold                                                                           |
+
+
+--bronze_database yt_data_pipeline_bronze
+--bronze_table raw_stats
+--silver_bucket yt-data-pipeline-silver-us-east-1-sai
+--silver_database yt_data_pipeline_silver
+--silver_table clean_stats
