@@ -24,3 +24,17 @@
 --silver_database yt_data_pipeline_silver
 --gold_bucket yt-data-pipeline-gold-us-east-1-sai
 --gold_database yt_data_pipeline_gold
+
+### Useful Commands
+
+```bash
+aws help
+aws configure
+
+cat ~/.aws/credentials
+cat ~/.aws/config
+
+aws s3 ls
+aws glue list-jobs --region us-east-1
+aws lambda list-functions
+```
